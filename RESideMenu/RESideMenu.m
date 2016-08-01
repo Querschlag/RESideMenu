@@ -774,6 +774,16 @@
     [self.view bringSubviewToFront:self.contentViewContainer];
 }
 
+- (void)setContentButtonAccessibilityLabel:(NSString *)contentButtonAccessibilityLabel {
+    if (_contentButton != nil) {
+        _contentButton.accessibilityLabel = contentButtonAccessibilityLabel;
+    }
+}
+
+- (NSString *)contentButtonAccessibilityLabel {
+    return _contentButton.accessibilityLabel;
+}
+
 #pragma mark -
 #pragma mark View Controller Rotation handler
 
